@@ -1,0 +1,14 @@
+object_tracker/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.h5
+videos/
+output/
+*.mp4
+*.avi
+*.jpg
+*.png
+Thumbs.db
+.DS_Store
