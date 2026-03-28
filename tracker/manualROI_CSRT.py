@@ -87,7 +87,7 @@ class ManualROI_CSRTTracker:
 
             success, bbox = tracker.update(frame)
 
-            # 🔥 SHOW FRAME FIRST (so user can act anytime)
+            # SHOW FRAME FIRST (so user can act anytime)
             display_frame = frame.copy()
 
             # Overlay basic info
@@ -127,12 +127,12 @@ class ManualROI_CSRTTracker:
                             cv2.FONT_HERSHEY_SIMPLEX,
                             0.7, (0, 0, 255), 2)
 
-            # 🔥 SHOW FRAME
+            # SHOW FRAME
             cv2.imshow("Tracking Review", display_frame)
 
             key = cv2.waitKey(30) & 0xFF
 
-            # 🔥 FORCE REINITIALIZATION ANYTIME
+            # FORCE REINITIALIZATION ANYTIME
             if key == ord('r'):
                 new_bbox = self.select_object(frame)
                 tracker = self.create_tracker()
